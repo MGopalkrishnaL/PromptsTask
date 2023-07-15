@@ -18,7 +18,9 @@ public class Prompt {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long promptId;
-    private String promptType;
+    private String valueType;
     private String value;
+    private String name;
+
 
 }

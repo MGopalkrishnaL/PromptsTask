@@ -12,3 +12,4 @@ public class ScenarioDTO {
     private String scenarioName;
     private List<String> promptList;
 }
+

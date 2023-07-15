@@ -26,4 +26,8 @@ public class PromptService {
         }
         return prompts;
     }
+
+    public List<Prompt> findAllPrompts() {
+       return promptRepository.findAll();
+    }
 }
