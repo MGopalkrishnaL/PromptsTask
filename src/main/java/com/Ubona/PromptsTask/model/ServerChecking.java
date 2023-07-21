@@ -1,5 +1,6 @@
 package com.Ubona.PromptsTask.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,24 +8,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
-
-@Setter
-@Getter
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-public class Scenario {
+@Getter
+@Setter
+public class ServerChecking {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer scenarioId;
-    private String scenarioName;
+    private String serverName;
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
-            name = "Scenario_Prompts",
-            joinColumns = @JoinColumn(name = "scenarioId"),
+            name = "Prompt_in_server",
+            joinColumns = @JoinColumn(name = "serverName"),
             inverseJoinColumns = @JoinColumn(name = "promptId")
     )
-    private List<Prompt> promptList;
-    private List<Long> sequence;
-
+    private List<Prompt> promptsInScenario;
 }

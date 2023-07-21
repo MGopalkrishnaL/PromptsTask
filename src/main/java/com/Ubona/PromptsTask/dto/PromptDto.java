@@ -5,13 +5,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
-@Getter
 @Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Scenario2Dto {
-    public List<String> promptList;
-    public String scenarioName;
+public class PromptDto {
+    private String promptName;
+    private String promptType;
+    private String variableType;
+    private String filename;
+    private String parameterKey;
 }

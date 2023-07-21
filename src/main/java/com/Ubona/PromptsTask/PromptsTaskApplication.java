@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @OpenAPIDefinition
 public class PromptsTaskApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(PromptsTaskApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(PromptsTaskApplication.class, args);
+    }
 
 }

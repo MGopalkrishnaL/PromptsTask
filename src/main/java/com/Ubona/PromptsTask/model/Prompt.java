@@ -1,9 +1,7 @@
 package com.Ubona.PromptsTask.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,8 +17,10 @@ public class Prompt {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long promptId;
     private String valueType;
-    private String value;
-    private String name;
-
-
+    private String fileName;
+    private String promptName;
+    private String parameterKey;
+    private String variableType;
+    private boolean fileStatus;
+    private boolean filePresentInServer;
 }
